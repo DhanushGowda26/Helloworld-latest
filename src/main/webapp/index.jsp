@@ -14,7 +14,7 @@
 <h1>Welcome peeps</h1>
 <h2>Have a nice day!<h2>
 <h3>Lets, learn quick and get placed. </h3>
-<h1> hope you learn new things and be surroundend with like minded ppl </h1>
+<h1> hope you learn new things and be surroundend with like minded ppl &#128512; </h1>
 </body>
 </html>
 
