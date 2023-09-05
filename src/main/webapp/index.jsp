@@ -12,7 +12,8 @@
 </head>
 <body>
 <h1>Welcome peeps</h1>
-<h2>Have a nice day!/h2>
+<h2>Have a nice day!<h2>
+<h3>Lets, learn quick and get placed. </h3>
 </body>
 </html>
 
