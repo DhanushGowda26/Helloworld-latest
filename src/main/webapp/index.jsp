@@ -6,7 +6,7 @@
 <title>JENKINS</title>
 <style>
   body {
-    background-color: Tomato;
+    background-color: DodgerBlue;
   }
 </style>
 </head>
