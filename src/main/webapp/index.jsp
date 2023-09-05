@@ -3,16 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to Microdegree Devops traning K</title>
+<title>JENKINS</title>
 <style>
   body {
-    background-color: green;
+    background-color: yellow;
   }
 </style>
 </head>
 <body>
-<h1>Welcome to Microdegree Devops traning</h1>
-<p>This is a sample Welcome to Microdegree Devops traning for 2023 Aug Evening Batch.</p>
+<h1>Welcome to peeps</h1>
+<h2>yes we did it</h2>
 </body>
 </html>
 
