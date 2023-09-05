@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy to tomca server') {
             steps {
                 echo 'my job is to deploy to tomvat server'
-                deploy adapters: [tomcat8(credentialsId: 'tomcar-server', path: '', url: 'http://3.1.200.99:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat8(credentialsId: 'tomcar-server', path: '', url: 'http://54.179.91.224:8080/')], contextPath: null, war: '**/*.war'
             }
         }      
 
