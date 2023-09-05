@@ -5,7 +5,7 @@ pipeline {
         stage('clone the project') {
             steps {
                 echo 'my job is to clone the project'
-                git 'https://github.com/vincloud2/Helloworld-latest.git'
+                git 'https://github.com/DhanushGowda26/Helloworld-latest.git'
             }
         }
         stage('build the project') {
