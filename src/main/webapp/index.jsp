@@ -11,8 +11,8 @@
 </style>
 </head>
 <body>
-<h1>Welcome to peeps</h1>
-<h2>yes we did it</h2>
+<h1>Welcome peeps</h1>
+<h2>Have a nice day!/h2>
 </body>
 </html>
 
