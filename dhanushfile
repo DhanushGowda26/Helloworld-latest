@@ -17,12 +17,43 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to tomca server') {
+         stage(' Build Docker Image from Dockerfile') {
             steps {
-                echo 'my job is to deploy to tomvat server'
-                deploy adapters: [tomcat8(credentialsId: 'tomcar-server', path: '', url: 'http://18.140.72.16:8080/')], contextPath: null, war: '**/*.war'
+                echo 'Docker buils my-proj'
+                sh 'docker build -t my-proj .' 
             }
-        }      
+        }
+        stage('login to dockerhub') {
+            steps {
+                echo 'login to dockerhub'
+                sh 'docker login -u dhanushks001 -p Dks@26'
+            }
+        } 
+        stage('Tag the Image') {
+            steps {
+                echo 'Tag the Image'
+                sh 'docker tag my-proj dhanushks001/my-proj'
+            }
+        } 
+        stage('Deploy to docker hub') {
+            steps {
+                echo 'Deploy to docker hub'
+                sh 'docker push dhanushks001/my-proj'
+            }
+        }
+        stage('Remove Docker conatiner') {
+            steps {
+                echo 'Remove Docker conatiner'
+                sh 'docker stop my-projproj_conatiner || true'
+                sh 'docker rm my-proj_conatiner || true'
+            }
+        }        
+        stage('Run docker image') {
+            steps {
+                echo 'Run the container'
+                sh 'docker run --name my-oroj_conatiner -d -p 8181:8080 dhanushks001/my-proj'
+            }
+        }   
 
     }
 }
