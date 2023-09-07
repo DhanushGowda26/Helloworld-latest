@@ -33,10 +33,11 @@ pipeline {
 
 stage('login to dockerhub') {
   steps {    
-    withDockerRegistry(credentialsId: 'docker-hub') 
+    withDockerRegistry(credentialsId: 'docker-hub') {
         sh 'docker login'   
     }
   } 
+}
 
          
         stage('Tag the Image') {
