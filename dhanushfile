@@ -31,13 +31,13 @@ pipeline {
         }
   
 
-stage('login to dockerhub') {
-  steps {    
-    withDockerRegistry(credentialsId: 'docker-hub') {
-        sh 'docker login'   
-    }
-  } 
-}
+          stage('Login to Docker Hub') {
+              steps {
+                  withDockerRegistry([credentialsId: 'docker-hub']) {
+                      sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'    
+                  }  
+              }   
+          }
 
          
         stage('Tag the Image') {
