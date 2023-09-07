@@ -29,11 +29,11 @@ pipeline {
                 sh 'docker build -t my-proj .' 
             }
         }
-        stage('login to dockerhub') {
-            steps {
-                echo 'login to dockerhub'
-                sh 'docker login -u dhanushks001 -p Dks@26'
-            }
+         stage('login to dockerhub') {
+     withDockerRegistry(credentialsId: 'docker-hub') {
+         sh 'docker login'   
+     }
+  }
         } 
         stage('Tag the Image') {
             steps {
