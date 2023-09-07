@@ -17,6 +17,12 @@ pipeline {
                 }
             }
         }
+        stage('where am i') {
+            steps {
+                echo 'i do pwd'
+                sh 'pwd'
+            }
+        }
          stage(' Build Docker Image from Dockerfile') {
             steps {
                 echo 'Docker buils my-proj'
